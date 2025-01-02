@@ -3,3 +3,4 @@ config/__pycache__/
 config/dashboard/__pycache__/
 config/shorter/__pycache__/
 .env
+vercel.json
