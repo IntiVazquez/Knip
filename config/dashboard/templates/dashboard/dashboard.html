@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="container mt-4">
+        <form id="searchForm" method="get" class="mb-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <input id="searchInput" type="text" name="search" class="form-control" placeholder="Buscar URL" value="{{ request.GET.search }}">
+                        <button class="btn btn-dark" type="submit">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="row g-3">
+
+            {% for url in urls_created %}
+                <div class="col-md-4">
+
+                    <div class="card custom ">
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+                                
+                                <h5 class="card-title"><a href="{{ url }}">/{{ url.short_url }}</a></h5>
+
+                                <div class="d-flex align-items-center">
+
+                                    <p class="card-text mb-0 me-2" title="{{ url.get_last_click_date }}">{{ url.clicks }} clicks</p>
+
+                                    <button type="button" onclick="copyToClipboard('{{ url }}')"z>
+                                        <i class="bi bi-clipboard me-1"></i>
+                                    </button>
+
+                                    <button type="button" hx-get="{% url 'dashboard:editURL' url_id=url.id %}" hx-target="#dialog">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </button>
+
+                                    <form action="{% url 'dashboard:deleteURL' url_id=url.id %}" method="post">
+                                        {% csrf_token %}
+                                        <button type="submit" onclick="return confirm('¿Estás seguro de que quieres eliminar esta URL?');" style="padding-left: 4px;">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
+
+
+                                    
+                                </div>
+
+                                
+
+                            </div>
+
+                            <p class="card-text mb-1 url-container">{{ url.raw_url }}</p>
+                            <p class="card-text text-end mb-0">{{ url.get_creation_date }}</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+                <p>No se encontraron URLs.</p>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <div id="modal" class="modal fade" tabindex="-1">
+        <div id="dialog" class="modal-dialog" hx-target="this">
+            
+        </div>
+    </div>
+
+
+
+
+    </div>
+
+
+    <script>
+
+        function copyToClipboard(text) {
+            var tempInput = document.createElement("input");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert('URL copiada al portapapeles!');
+        }
+
+
+    </script>
+
+{% endblock %}
