@@ -3,8 +3,8 @@
 
 {% block content %}
 
-    <h1 class="display-1">Paste your URL to shorten</h1>
-    <p class="subtitle">Esta es una pagina para recortar oepn source o alguna pelotudes de este estilo</p>
+    <h1 class="display-1">Pega tu URL para Klippearla</h1>
+    <p class="subtitle">Puedes iniciar sesion para perzonalizar y manegar tus links</p>
 
     <div class="container mt-5">
         <div class="row gy-4 align-items-center justify-content-center">
@@ -44,9 +44,13 @@
                 {% if messages %}
                     <div class="mb-3 mt-2">
                         {% for message in messages %}
-                            {% if "success" in message.tags %}
-                                <div class="alert alert-primary" role="alert">
+                            {% if "url_success" in message.tags %}
+                                <div class="alert" role="alert" style="color: rgb(145, 145, 145); background-color: #101a2b;">
                                     <strong>Tu URL es </strong> <a href="{{ message }}">{{ message }}</a>
+                                </div>
+                            {% elif "success" in message.tags %}
+                                <div class="alert" role="alert" style="color: rgb(145, 145, 145); background-color: #101a2b;">
+                                    <strong>{{ message }}</strong>
                                 </div>
                             {% elif "error" in message.tags %}
                                 <div class="alert alert-danger" role="alert">

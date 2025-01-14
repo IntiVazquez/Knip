@@ -159,7 +159,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -187,3 +187,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Redireccion al inciar sesion y registrarse y remover paso intermedio de social account
+
+ACCOUNT_SIGNUP_REDIRECT_URL = '/'
+
+LOGIN_REDIRECT_URL = '/'
+
+SOCIALACCOUNT_LOGIN_ON_GET = True

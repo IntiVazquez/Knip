@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% load allauth i18n %}
 {% block head_title %}
-    {% trans "Sign Out" %}
+    {% trans "Log Out" %}
 {% endblock head_title %}
 {% block content %}
 
@@ -15,8 +15,8 @@
             <div class="row">
               <div class="col-12">
                 <div class="mb-4">
-                  <h3>Sign out</h3>
-                  <p>Are you sure you want to sign out?</p>
+                  <h3>Log out</h3>
+                  <p>Are you sure you want to log out?</p>
                 </div>
               </div>
             </div>
@@ -24,7 +24,7 @@
               {% csrf_token %}
                 <div class="col-12">
                   <div class="d-grid">
-                      <button class="btn btn-dark btn-lg" type="submit" id="logoutButton">Sign Out</button>
+                      <button class="btn btn-dark btn-lg" type="submit" id="logoutButton">Log Out</button>
                   </div>
                 </div>
               </div>

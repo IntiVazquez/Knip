@@ -25,7 +25,7 @@ def home(request):
                     URL.objects.create(raw_url=raw_url, short_url=short_url, user=request.user)
                 else:
                     URL.objects.create(raw_url=raw_url, short_url=short_url)
-                messages.success(request, short_url)
+                messages.success(request, short_url, extra_tags="url_success")
                 
                 return redirect('shorter:home')
 
@@ -33,7 +33,7 @@ def home(request):
             # Mostrar mensajes de error del formulario
             for field, errors in form.errors.items():
                 for error in errors:
-                    messages.error(request, f"Error en el campo '{field}': {error}")
+                    messages.error(request, f"{error}")
 
     else:
         form = URLForm()
@@ -43,12 +43,17 @@ def home(request):
 
 
 def redirectURL(request, short_url):
+    # Al parecer lo de que shorturl sea favicon.ico es porque no existe un iconito aun si agrego uno podria quitar lo de favicon.ico
     try:
         url_data = URL.objects.get(short_url = short_url)
         url_data.used()
         return redirect(url_data.raw_url)
 
     except URL.DoesNotExist:
+
+        if short_url == '' or short_url == 'favicon.ico':
+            return redirect('shorter:home')
+        
         messages.error(request, 'El URL ingresado no existe')
         return redirect('shorter:home')
     
