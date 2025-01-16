@@ -85,7 +85,7 @@ h1 {
 
 .navbar img {
     height: 50%;
-    max-height: 45px; /* Altura máxima para asegurar que no se pase del navbar */
+    max-height: 30px; /* Altura máxima para asegurar que no se pase del navbar */
     width: auto; /* Mantiene la proporción de la imagen */
 }
 
