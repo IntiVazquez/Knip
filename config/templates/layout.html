@@ -45,11 +45,11 @@
                             <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                         </ul>
                     </div> -->
-                    <a href="{% url 'dashboard:dashboard' %}" class="nav-link me-2">Dashboard</a>   
-                    <a href="{% url 'account_logout' %}" class="nav-link">Logout</a>
+                    <a href="{% url 'dashboard:dashboard' %}" class="nav-link me-3">Dashboard</a>   
+                    <a href="{% url 'account_logout' %}" class="nav-link">Cerrar sesión</a>
                 {% else %}
-                    <a href="{% url 'account_login' %}" class="nav-link me-2">Login</a>   
-                    <a href="{% url 'account_signup' %}" class="nav-link">Sign Up</a>
+                    <a href="{% url 'account_login' %}" class="nav-link me-3">Iniciar sesión</a>   
+                    <a href="{% url 'account_signup' %}" class="nav-link">Registrarse</a>
                 {% endif %}
             </div>
         </nav>

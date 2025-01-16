@@ -43,7 +43,6 @@ def home(request):
 
 
 def redirectURL(request, short_url):
-    # Al parecer lo de que shorturl sea favicon.ico es porque no existe un iconito aun si agrego uno podria quitar lo de favicon.ico
     try:
         url_data = URL.objects.get(short_url = short_url)
         url_data.used()
@@ -51,7 +50,7 @@ def redirectURL(request, short_url):
 
     except URL.DoesNotExist:
 
-        if short_url == '' or short_url == 'favicon.ico':
+        if short_url == '':
             return redirect('shorter:home')
         
         messages.error(request, 'El URL ingresado no existe')

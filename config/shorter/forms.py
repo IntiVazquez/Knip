@@ -21,8 +21,8 @@ class URLForm (forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(URLForm, self).__init__(*args, **kwargs)
 
-        self.fields['raw_url'].label = 'Destination URL'
-        self.fields['short_url'].label = 'Short URL'
+        self.fields['raw_url'].label = 'Ingrese su URL aquí'
+        self.fields['short_url'].label = 'Link recortado'
         
         self.fields['raw_url'].required = True
         self.fields['short_url'].required = False

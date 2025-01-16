@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 import random, string
 
+
 class URL(models.Model):
     # Validación que permite solo letras y números
     short_url_validator = RegexValidator(
@@ -37,10 +38,11 @@ class URL(models.Model):
         return f"{page_url}/{self.short_url}"
 
     def get_creation_date(self):
-        return self.creation_date.strftime('%B %d, %Y')
+        return self.creation_date.strftime('%d de %B de %Y').capitalize()
 
     def get_last_click_date(self):
         if self.clicks == 0:
-            return "Never Clicked"
+            return "Nunca clickeado"
         else:
-            return f"Last clicked: {self.last_click_date.strftime('%B %d, %Y')}"
+            fecha = self.last_click_date.strftime('%d de %B de %Y').capitalize()
+            return f"Ultimo click: {fecha}"

@@ -1,3 +1,8 @@
+* {
+    font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    font-weight: normal;
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -43,6 +48,7 @@ button:hover {
 h1 {
     text-align: center;
     color: #c9c9c9;
+    letter-spacing: -2px;
 }   
 
 .nav {
