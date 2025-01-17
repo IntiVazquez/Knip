@@ -13,8 +13,8 @@
             <div class="row">
               <div class="col-12">
                 <div class="mb-4">
-                  <h3>Sign up</h3>
-                  <p>Already have an account? Then please <a href="{{ login_url }}">sign in</a></p>
+                  <h3>Registrarse</h3>
+                  <p>¿Ya tiene una cuenta? Entonces <a href="{{ login_url }}">inicia sesión</a></p>
                 </div>
               </div>
             </div>
@@ -32,27 +32,19 @@
                 <div class="col-12">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" name="username" id="id_username" placeholder="Username" required>
-                        <label for="id_username" class="form-label">Username</label>
+                        <label for="id_username" class="form-label">Nombre de Usuario</label>
                         <p id="usernameHelp" class="form-text error-text">
                             {{ form.username.errors.as_text }}
                         </p>
                     </div>
                 </div>
         
-                <div class="col-12">
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" name="email" id="id_email" placeholder="Email">
-                        <label for="id_email" class="form-label">Email (Opcional)</label>
-                        <p id="emailHelp" class="form-text error-text">
-                            {{ form.email.errors.as_text }}
-                        </p>
-                    </div>
-                </div>
+
         
                 <div class="col-12">
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control" name="password1" id="id_password1" placeholder="Password" required>
-                        <label for="id_password1" class="form-label">Password</label>
+                        <label for="id_password1" class="form-label">Contraseña</label>
                         <p id="password1Help" class="form-text error-text">
                             {{ form.password1.errors.as_text }}
                         </p>
@@ -62,7 +54,7 @@
                 <div class="col-12">
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control" name="password2" id="id_password2" placeholder="Confirm Password" required>
-                        <label for="id_password2" class="form-label">Confirm Password</label>
+                        <label for="id_password2" class="form-label">Confirmar Contraseña</label>
                         <p id="password2Help" class="form-text error-text">
                             {{ form.password2.errors.as_text }}
                         </p>
@@ -71,7 +63,7 @@
 
                 <div class="col-12">
                     <div class="d-grid">
-                        <button class="btn btn-dark btn-lg" type="submit" id="singupButton">Sign Up</button>
+                        <button class="btn btn-dark btn-lg" type="submit" id="singupButton">Registrarse</button>
                     </div>
                   </div>
 

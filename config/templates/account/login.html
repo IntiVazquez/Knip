@@ -16,8 +16,8 @@
               <div class="row">
                 <div class="col-12">
                   <div class="mb-4">
-                    <h3>Sign in</h3>
-                    <p>Don't have an account? <a href="{{ signup_url }}">Sign up</a></p>
+                    <h3>Iniciar sesión</h3>
+                    <p>¿No tiene una cuenta? <a href="{{ signup_url }}">Regístrate</a></p>
                   </div>
                 </div>
               </div>
@@ -33,7 +33,7 @@
                   <div class="col-12">
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control" name="login" id="id_login" placeholder="Username" required>
-                      <label for="id_login" class="form-label">Username</label>
+                      <label for="id_login" class="form-label">Nombre de Usuario</label>
                         <p id="loginHelp" class="form-text error-text">
                             {{ form.login.errors.as_text }}
                         </p>
@@ -42,7 +42,7 @@
                   <div class="col-12">
                     <div class="form-floating mb-3">
                       <input type="password" class="form-control" name="password" id="id_password" placeholder="Password" required>
-                      <label for="id_password" class="form-label">Password</label>
+                      <label for="id_password" class="form-label">Contraseña</label>
                       <p id="passwordHelp" class="form-text error-text">
                         {{ form.password.errors.as_text }}
                     </p>
@@ -54,13 +54,13 @@
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" value="" name="remember" id="id_remember">
                       <label class="form-check-label text-secondary" for="id_remember">
-                        Keep me logged in
+                        Mantener sesion
                       </label>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="d-grid">
-                        <button class="btn btn-dark btn-lg" type="submit" id="loginButton">Sign In</button>
+                        <button class="btn btn-dark btn-lg" type="submit" id="loginButton">Iniciar sesión</button>
                     </div>
                   </div>
                 </div>
@@ -75,7 +75,7 @@
 
               <div class="row">
                 <div class="col-12">
-                  <p class="mt-4 mb-4">Or continue with</p>
+                  <p class="mt-4 mb-4">O continua con</p>
                   <div class="d-flex gap-2 gap-sm-3 justify-content-centerX">
                     <a href="{% provider_login_url 'google' %}" class="btn btn-outline-danger bsb-btn-circle bsb-btn-circle-2xl">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
