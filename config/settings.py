@@ -115,7 +115,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 
-WSGI_APPLICATION = 'config.wsgi.app'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
