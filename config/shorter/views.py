@@ -43,16 +43,15 @@ def home(request):
 
 
 def redirectURL(request, short_url):
+    if short_url == '':
+        return redirect('shorter:home')
+    
     try:
         url_data = URL.objects.get(short_url = short_url)
         url_data.used()
         return redirect(url_data.raw_url)
 
     except URL.DoesNotExist:
-
-        if short_url == '':
-            return redirect('shorter:home')
-        
         messages.error(request, 'El URL ingresado no existe')
         return redirect('shorter:home')
     
