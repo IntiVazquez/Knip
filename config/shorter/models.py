@@ -34,7 +34,7 @@ class URL(models.Model):
 
 
     def __str__(self):
-        page_url = "knip.vercel.app"
+        page_url = "http://127.0.0.1:8000"
         return f"{page_url}/{self.short_url}"
 
     def get_creation_date(self):
