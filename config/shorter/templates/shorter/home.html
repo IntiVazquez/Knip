@@ -4,7 +4,12 @@
 {% block content %}
 
     <h1 class="display-1">Pega tu URL para Acortarla</h1>
-    <p class="subtitle">Inicia sesión para perzonalizar y gestionar tus links</p>
+    {% if user.is_authenticated %}
+        <p class="subtitle">Haz click en Dashboard para gestionar tus links</p>
+    {% else %}
+        <p class="subtitle">Inicia sesión para perzonalizar y gestionar tus links</p>
+    {% endif %}
+    
 
     <div class="container mt-5">
         <div class="row gy-4 align-items-center justify-content-center">

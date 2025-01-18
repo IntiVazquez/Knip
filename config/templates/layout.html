@@ -31,20 +31,6 @@
             </a>
             <div class="ms-auto d-flex align-items-center">
                 {% if user.is_authenticated %}
-                    <!-- <div class="dropdown ms-auto">
-                        <button class="btn btn-link dropdown-toggle d-flex align-items-center" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-circle" style="font-size: 30px; line-height: 1;"></i>
-                        </button>
-                        
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><span class="dropdown-item-text">{{ user.username }}</span></li>
-
-                            <li><hr class="dropdown-divider"></li>
-
-                            <li><a class="dropdown-item" href="{% url 'dashboard:dashboard' %}">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                        </ul>
-                    </div> -->
                     <a href="{% url 'dashboard:dashboard' %}" class="nav-link me-3">Dashboard</a>   
                     <a href="{% url 'account_logout' %}" class="nav-link">Cerrar sesión</a>
                 {% else %}
