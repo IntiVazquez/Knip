@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 import random, string
+from decouple import config
 
 
 class URL(models.Model):
@@ -34,7 +35,7 @@ class URL(models.Model):
 
 
     def __str__(self):
-        page_url = "http://127.0.0.1:8000"
+        page_url = 'knip.vercel.app'
         return f"{page_url}/{self.short_url}"
 
     def get_creation_date(self):

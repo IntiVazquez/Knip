@@ -46,7 +46,7 @@
                         {% for message in messages %}
                             {% if "url_success" in message.tags %}
                                 <div class="alert" role="alert" style="color: rgb(145, 145, 145); background-color: #101a2b;">
-                                    <strong>Tu URL es </strong> <a href="{{ message }}">{{ message }}</a>
+                                    <strong>Tu URL es: </strong> <a href="{{ message }}">knip.vercel.app/{{ message.short_url }}</a>
                                 </div>
                             {% elif "success" in message.tags %}
                                 <div class="alert" role="alert" style="color: rgb(145, 145, 145); background-color: #101a2b;">
