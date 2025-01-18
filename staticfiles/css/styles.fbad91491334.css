@@ -78,7 +78,7 @@ h1 {
 
 .custom-home .form-control:focus {
     border-color: #ffffff;
-    box-shadow: none;
+    box-shadow: none; 
 }
 
 .form-floating > label {
@@ -91,7 +91,7 @@ h1 {
 
 .navbar img {
     height: 50%;
-    max-height: 30px;
+    max-height: 30px; 
     width: auto;
 }
 
@@ -100,11 +100,17 @@ h1 {
     color: white;
 }
 
-.github-logo {
-    position: fixed;    /* Fija el logo en la pantalla */
-    left: 15px;          /* Acerca el logo 5px al borde izquierdo */
-    bottom: 15px;        /* Acerca el logo 5px al borde inferior */
-    z-index: 9999;      /* Asegura que esté por encima de otros elementos */
-    width: 35px;        /* Reduce el tamaño del logo a 40px */
-    height: auto;       /* Mantiene la proporción del logo */
+
+.fixed-left {
+    position: fixed;  /* Esto hace que el elemento esté fijo en la pantalla */
+    left: 10px;       /* Ajusta la distancia desde la esquina izquierda */
+    top: 10px;        /* Ajusta la distancia desde la parte superior de la página */
+    z-index: 9999;    /* Asegura que el botón esté por encima de otros elementos */
+    border-radius: 50%; /* Hacer el botón redondo */
+    padding: 15px;    /* Ajusta el tamaño del botón */
+}
+
+.fixed-left svg {
+    width: 30px;      /* Ajusta el tamaño del ícono */
+    height: 30px;     /* Ajusta el tamaño del ícono */
 }

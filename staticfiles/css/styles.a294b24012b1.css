@@ -102,9 +102,9 @@ h1 {
 
 .github-logo {
     position: fixed;    /* Fija el logo en la pantalla */
-    left: 15px;          /* Acerca el logo 5px al borde izquierdo */
-    bottom: 15px;        /* Acerca el logo 5px al borde inferior */
+    left: 10px;         /* Colócalo a 10px del borde izquierdo */
+    bottom: 10px;       /* Colócalo a 10px del borde inferior */
     z-index: 9999;      /* Asegura que esté por encima de otros elementos */
-    width: 35px;        /* Reduce el tamaño del logo a 40px */
-    height: auto;       /* Mantiene la proporción del logo */
+    width: 50px;        /* Ajusta el tamaño del logo */
+    height: auto;       /* Mantén la proporción del logo */
 }

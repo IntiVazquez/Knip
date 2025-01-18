@@ -100,11 +100,3 @@ h1 {
     color: white;
 }
 
-.github-logo {
-    position: fixed;    /* Fija el logo en la pantalla */
-    left: 15px;          /* Acerca el logo 5px al borde izquierdo */
-    bottom: 15px;        /* Acerca el logo 5px al borde inferior */
-    z-index: 9999;      /* Asegura que esté por encima de otros elementos */
-    width: 35px;        /* Reduce el tamaño del logo a 40px */
-    height: auto;       /* Mantiene la proporción del logo */
-}

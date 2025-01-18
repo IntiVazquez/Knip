@@ -30,7 +30,7 @@ def home(request):
                 return redirect('shorter:home')
 
         else:
-            # Mostrar mensajes de error del formulario
+            # Mostrar mensajes de error
             for field, errors in form.errors.items():
                 for error in errors:
                     messages.error(request, f"{error}")
@@ -43,6 +43,7 @@ def home(request):
 
 
 def redirectURL(request, short_url):
+    # Evita conecciones a Neon inecesarios
     if short_url == '':
         return redirect('shorter:home')
     

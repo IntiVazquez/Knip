@@ -9,7 +9,7 @@ from decouple import config
 class URL(models.Model):
     # Validación que permite solo letras y números
     short_url_validator = RegexValidator(
-        regex='^[a-zA-Z0-9]*$',  # Solo permite letras y números (mayúsculas y minúsculas)
+        regex='^[a-zA-Z0-9]*$',
         message="El short_url solo puede contener letras y números."
     )
 
@@ -17,7 +17,7 @@ class URL(models.Model):
     short_url = models.CharField(
         max_length=20, 
         unique=True, 
-        validators=[short_url_validator]  # Aplicamos el validador aquí
+        validators=[short_url_validator]
     )
     user = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
     creation_date = models.DateTimeField(default=timezone.now)
@@ -32,7 +32,6 @@ class URL(models.Model):
     def random_url():
         random_url = ''.join(random.choices(string.ascii_letters, k=6))
         return random_url
-
 
     def __str__(self):
         page_url = 'knip.vercel.app'

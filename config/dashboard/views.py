@@ -29,6 +29,7 @@ class DashboardView(LoginRequiredMixin, ListView):
 
         return queryset
 
+# Para el Modal de Editar
 def editURL(request, url_id):
     url = get_object_or_404(URL, id=url_id)
     if request.method == "POST":
