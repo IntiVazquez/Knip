@@ -108,3 +108,7 @@ h1 {
     width: 35px;    
     height: auto;    
 }
+
+.error-text {
+    color: rgb(255, 110, 100);
+}

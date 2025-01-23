@@ -3,7 +3,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 import random, string
-from decouple import config
 
 
 class URL(models.Model):

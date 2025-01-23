@@ -6,7 +6,7 @@
     <form hx-post="{{ request.path }}" class="modal-content custom-home">
         {% csrf_token %}
         <div class="modal-header mb-2">
-            <h1>Editar URL</h1>
+            <h5 class="modal-title">Editar URL</h5>
         </div>
         <div class="modal-body ">
             
@@ -25,7 +25,7 @@
             <button type="button" class="btn" data-bs-dismiss="modal" style="background-color: #1b1b1b; color: white;" onmouseover="this.style.backgroundColor='#333';" onmouseout="this.style.backgroundColor='#1b1b1b';">
                 Cancelar
             </button>
-            <button type="submit" class="btn btn-dark">
+            <button type="submit" class="btn btn-dark" onclick="alert('URL editada con éxito')">
                 Guardar
             </button>
         </div>

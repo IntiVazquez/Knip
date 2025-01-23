@@ -19,7 +19,7 @@
 
 ## Introducción
 
-[**Knip**](knip.vercel.app) es una pagina que permite acortar links de forma simple, rápida  y segura.
+[**Knip**](https://knip.vercel.app) es una pagina que permite acortar links de forma simple, rápida  y segura.
 
 Este proyecto utiliza las siguientes tecnologías:
 
@@ -29,3 +29,29 @@ Este proyecto utiliza las siguientes tecnologías:
 - [**Bootstrap**](https://getbootstrap.com/) - Diseño del la Web.
 
 
+## 🔭 Roadmap
+
+> - *✅* = Estable, finalizado.
+> - *🔔* = Estable, pero pueden haber bugs.
+> - *⚙️* = En curso.
+
+**Problemas conocidos:**
+
+- ✅ Error de redireccion al iniciar sesion con Gmail o Github.
+- ⚙️ Los meses en el dashboard se muestran en ingles.
+
+**Dashboard:**
+
+- ✅ Borrar una URL acortada.
+- ✅ Copiar una URL acortada.
+- 🔔 Editar una URL acortada.
+- ⚙️ Mejora visual de las alertas de editar, copiar y borrar.
+- ⚙️ Implementación de búsqueda dinámica.
+- ⚙️ Generador de QR para los links.
+
+
+**Usuario:**
+
+- ⚙️ Modificar nickname.
+- ⚙️ Modificar email.
+- ⚙️ Borrar cuenta.
